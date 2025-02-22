@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <script src="constructorFunctions.js" defer></script>   
+    <script src="factoryFunctions.js" defer></script>        
+    <script src="prototypes.js" defer></script>               
+</head>
+<body>
+    <h1>JavaScript Constructor, Factory, and Prototype Functions</h1>
+
+    <div>
+        <h2>Person Object</h2>
+        <p id="personOutput"></p>
+    </div>
+
+    <div>
+        <h2>Robot Object</h2>
+        <p id="robotOutput"></p>
+    </div>
+
+    <div>
+        <h2>Animal Object</h2>
+        <p id="animalOutput"></p>
+    </div>
+
+    <script>
+        // Using the Person constructor function
+        const person1 = new Person("Khriston", "Robinson", 29, "Brown");
+        document.getElementById("personOutput").textContent = `${person1.firstName} ${person1.lastName} is ${person1.age} years old with ${person1.eyeColor} eyes.`;
+
+        // Using the createRobot factory function
+        const robot1 = createRobot("RX-78", 2025, "Silver");
+        document.getElementById("robotOutput").textContent = `${robot1.model} is a ${robot1.color} robot from the year ${robot1.year}.`;
+        robot1.greet();
+
+        // Using the Animal constructor and prototype method
+        const lion = new Animal("Lion", "Carnivora", "Mammalia");
+        document.getElementById("animalOutput").textContent = `The ${lion.species} is from the order ${lion.order} and belongs to the clade ${lion.clade}.`;
+        lion.describe();
+    </script>
+</body>
+</html>
