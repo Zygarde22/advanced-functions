@@ -1,23 +1,21 @@
-function Animal(species, order, clade,) {
+ 
+function Animal(species, order, clade) {
     this.species = species;
     this.order = order;
-    this.clade= clade;
-     
+    this.clade = clade;
 }
 
  
-Person.prototype.fullName = function() {
-    return `${this.firstName} ${this.lastName}`;
+Animal.prototype.describe = function() {
+    console.log(`This is a ${this.species} from the order ${this.order}, which belongs to the clade ${this.clade}.`);
 };
 
  
-Person.prototype.greet = function() {
-    console.log(`Hello, my name is ${this.fullName()} and I am ${this.age} years old.`);
-};
+const lion = new Animal("Lion", "Carnivora", "Mammalia");
+ 
+console.log(lion.species); 
+console.log(lion.order);   
+console.log(lion.clade);    
 
  
-const person1 = new Person("Khriston", "Robinson", 29, "Brown");
-
- 
-console.log(person1.fullName());  
-person1.greet();   
+lion.describe(); 
