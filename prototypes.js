@@ -1,8 +1,8 @@
-function Person(first, last, age, eyeColor) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.eyeColor = eyeColor;
+function Animal(species, order, clade,) {
+    this.species = species;
+    this.order = order;
+    this.clade= clade;
+     
 }
 
  

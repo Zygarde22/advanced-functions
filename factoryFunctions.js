@@ -1,7 +1,7 @@
  
-function createRobot(model, year, color) {
+function createPerson(age, name, eyecolor) {
     return {
-        model: model,
+        age: model,
         year: year,
         color: color,
         greet: function() {
@@ -11,12 +11,4 @@ function createRobot(model, year, color) {
 }
 
  
-const robot1 = createRobot("RX-78", 2025, "Silver");
-
  
-console.log(robot1.model);  
-console.log(robot1.year);
-console.log(robot1.color);  
-
-
-robot1.greet(); 
